@@ -52,14 +52,14 @@ const unsigned char myBitmap [] PROGMEM = {
 };
 
 void setup() {
-  // Inicializace OLED displeje s I2C adresou 0x3D
+  // Inicializace OLED displeja
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
   delay(2000);
 }
 
 void loop() {
-  // Zobrazte bitmapu na OLED displeji na pozici (0, 0) s šířkou 120 a výškou 60 pixelů
-  display.drawBitmap(0, 0, myBitmap, 120, 60, WHITE);
+  // Zobrazte bitmapu na OLED displeji na pozici (0, 0) s šířkou 128 a výškou 64 pixelů
+  display.drawBitmap(0, 0, myBitmap, 128, 64, WHITE);
   display.display();
 }
